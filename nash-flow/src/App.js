@@ -12,3 +12,23 @@ function App() {
 }
 
 export default App;
+
+
+/*
+TODO 
+  Create the following components:
+    Header
+    Navbar
+    Map
+    Selection
+    Information
+
+  Transfer this information to Trello ^^^
+
+  Research Google Maps API
+
+  Create Database for "Customer Information"
+
+  Create Java SpringBoot backend application to handle get information from the
+    database and do any neccesary calculations on the server side of the application
+*/

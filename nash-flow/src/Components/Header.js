@@ -13,6 +13,7 @@ class Header extends React.Component {
         return(
             <div>
                 <h1>This is my header!</h1>
+                <Navbar />
             </div>
         );
     }

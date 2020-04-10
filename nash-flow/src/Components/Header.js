@@ -1,6 +1,5 @@
 import React from "react";
-import ReactDOM from 'react-dom';
-
+import '../App.css';
 
 class Header extends React.Component {
     constructor(){
@@ -11,9 +10,11 @@ class Header extends React.Component {
 
     render(){
         return(
-            <div>
-                <h1>This is my header!</h1>
+            <div className="text-muted">
+                <h1>Get... It... DONE!</h1>
             </div>
         );
     }
 }
+
+export default Header;

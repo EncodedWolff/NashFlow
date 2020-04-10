@@ -15,9 +15,11 @@ class Navbar extends React.Component{
             //I need to remember to write the logic to make the navbar fold down into a
             //small hamburger when it is not in use in mobile, as well as to highlight
             //the current page that is in use with a tab/label component from Bootstrap
-            <div>
-                
+            <div className="navbar">
+                <p>Don't forget the navbar!</p>
             </div>
         );
     }
 }
+
+export default Navbar;

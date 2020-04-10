@@ -9,9 +9,11 @@ class Information extends React.Component{
 
     render(){
         return (
-            <div>
+            <div className="info-tab">
 
             </div>
         );
     };
 }
+
+export default Information;

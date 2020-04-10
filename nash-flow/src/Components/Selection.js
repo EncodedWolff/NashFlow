@@ -15,9 +15,11 @@ class Selection extends React.Component{
         //dropdowns for some of the more complicated types of selections such as name
         //searches.
         return(
-            <div>
+            <div className="selection-tab">
 
             </div>
         );
     }
 }
+
+export default Selection;

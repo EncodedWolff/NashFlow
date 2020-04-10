@@ -16,9 +16,11 @@ class Map extends React.Component{
             //map and be able to see breif general information about the selected marker.
             //Markers should be styled based on thier "Status" or "Product"
             //(i.e. Sold, Rejected, No Sale, etc.)
-            <div>
+            <div className="map-area">
 
             </div>
         );
     }
 }
+
+export default Map;

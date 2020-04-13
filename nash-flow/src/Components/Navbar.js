@@ -7,6 +7,8 @@ class Navbar extends React.Component{
 
     state = {};
 
+    
+
     render(){
         return(
             //The div below will hold all of the JSX code for the general appearance of
@@ -16,7 +18,9 @@ class Navbar extends React.Component{
             //small hamburger when it is not in use in mobile, as well as to highlight
             //the current page that is in use with a tab/label component from Bootstrap
             <div className="navbar">
-                <p>Don't forget the navbar!</p>
+                <a href="#">Login</a>
+                <a href="#">Customers</a>
+                <a href="#">About</a>
             </div>
         );
     }

@@ -1,6 +1,9 @@
 import React from 'react';
 import './App.css';
-import Header from '../src/Components/Header';
+import Header from './Components/Header';
+import WrappedMap from './Components/Map';
+import Selection from './Components/Selection'
+import Information from './Components/Information';
 
 /*
 Whithin this app, I need to keep a mobile first design in mind. Most of the notes for
@@ -20,6 +23,21 @@ function App() {
       <header className="App-header">
         <Header />
       </header>
+      <div className="map-area">
+        <WrappedMap 
+        googleMapURL={`https://maps.googleapis.com/maps/api/js?&key=${process.env.REACT_APP_GOOGLE_MAPS_KEY}`}
+        loadingElement={<div style={{height: "100%"}}/>}
+        containerElement={<div style={{height: "100%"}}/>}
+        mapElement={<div style={{height: "100%"}}/>}
+        />
+        
+      </div>
+      <div className="selection-tab">
+        <Selection />
+      </div>
+      <div className="info-tab">
+        <Information />
+      </div>
     </div>
   );
 }

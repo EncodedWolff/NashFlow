@@ -1,4 +1,5 @@
 import React from 'react';
+import {GoogleMap, withScriptjs, withGoogleMap} from 'react-google-maps';
 
 class Map extends React.Component{
     constructor(){
@@ -16,11 +17,14 @@ class Map extends React.Component{
             //map and be able to see breif general information about the selected marker.
             //Markers should be styled based on thier "Status" or "Product"
             //(i.e. Sold, Rejected, No Sale, etc.)
-            <div className="map-area">
-
-            </div>
+            <GoogleMap 
+            defaultZoom={10} 
+            defaultCenter={{lat:36.1626638, lng:-86.7816016}}
+            />
         );
     }
 }
 
-export default Map;
+const WrappedMap = withScriptjs(withGoogleMap(Map));
+
+export default WrappedMap;

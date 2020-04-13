@@ -10,7 +10,7 @@ class Information extends React.Component{
     render(){
         return (
             <div className="info-tab">
-
+                <p>This is information about a marker.</p>
             </div>
         );
     };

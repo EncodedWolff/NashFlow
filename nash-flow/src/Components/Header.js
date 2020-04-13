@@ -1,5 +1,7 @@
 import React from "react";
-import '../App.css';
+import ReactDOM from 'react-dom';
+import Navbar from './Navbar';
+
 
 class Header extends React.Component {
     constructor(){
@@ -10,8 +12,9 @@ class Header extends React.Component {
 
     render(){
         return(
-            <div className="text-muted">
-                <h1>Get... It... DONE!</h1>
+            <div>
+                <h1>This is my header!</h1>
+                <Navbar />
             </div>
         );
     }

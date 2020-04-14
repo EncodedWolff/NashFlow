@@ -48,19 +48,8 @@
 }
 
 .map-area{
-  background-color: purple;
   width: 85vw;
   height: 95vh;
   float: right;
 }
 
-.selection-tab{
-  background-color: orangered;
-  width: 15vw;
-  padding-bottom: 0%;
-}
-
-.info-tab{
-  background-color: aquamarine;
-  padding-top: 0%;
-}

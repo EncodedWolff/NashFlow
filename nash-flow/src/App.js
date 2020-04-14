@@ -4,6 +4,7 @@ import Header from './Components/Header';
 import WrappedMap from './Components/Map';
 import Selection from './Components/Selection'
 import Information from './Components/Information';
+import { BrowserRouter, Route, Switch, Link } from 'react-router-dom'
 
 /*
 Whithin this app, I need to keep a mobile first design in mind. Most of the notes for
@@ -18,7 +19,7 @@ off to the left of the page at all times.
 */
 
 class App extends React.Component {
-  constructor(props){
+  constructor(props) {
     super(props);
   }
 
@@ -27,32 +28,38 @@ class App extends React.Component {
     userId: "",
     results: "ALL"
   }
-  
-  render(){
+
+  render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <Header />
-        </header>
-        <div className="map-area">
-          <WrappedMap 
-          googleMapURL={`https://maps.googleapis.com/maps/api/js?&key=${process.env.REACT_APP_GOOGLE_MAPS_KEY}`}
-          loadingElement={<div style={{height: "100%"}}/>}
-          containerElement={<div style={{height: "100%"}}/>}
-          mapElement={<div style={{height: "100%"}}/>}
-          />
-          
+      <BrowserRouter>
+        <div className="App">
+          <header className="App-header">
+            <Header />
+          </header>
+          <div className="container-fluid">
+            <div className="row">
+
+              <div className="col-2">
+                <Information />
+                <Selection />
+              </div>
+              <div className="map-area col-10">
+                <WrappedMap
+                  googleMapURL={`https://maps.googleapis.com/maps/api/js?&key=${process.env.REACT_APP_GOOGLE_MAPS_KEY}`}
+                  loadingElement={<div style={{ height: "100%" }} />}
+                  containerElement={<div style={{ height: "100%" }} />}
+                  mapElement={<div style={{ height: "100%" }} />}
+                />
+              </div>
+
+            </div>
+          </div>
+
         </div>
-        <div className="selection-tab">
-          <Selection />
-        </div>
-        <div className="info-tab">
-          <Information />
-        </div>
-      </div>
+      </BrowserRouter>
     );
   };
-  
+
 }
 
 export default App;

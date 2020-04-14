@@ -17,29 +17,42 @@ When in mobile, the selection tool moves to the header. On a desktop, it should 
 off to the left of the page at all times.
 */
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <Header />
-      </header>
-      <div className="map-area">
-        <WrappedMap 
-        googleMapURL={`https://maps.googleapis.com/maps/api/js?&key=${process.env.REACT_APP_GOOGLE_MAPS_KEY}`}
-        loadingElement={<div style={{height: "100%"}}/>}
-        containerElement={<div style={{height: "100%"}}/>}
-        mapElement={<div style={{height: "100%"}}/>}
-        />
-        
+class App extends React.Component {
+  constructor(props){
+    super(props);
+  }
+
+  state = {
+    customerId: "",
+    userId: "",
+    results: "ALL"
+  }
+  
+  render(){
+    return (
+      <div className="App">
+        <header className="App-header">
+          <Header />
+        </header>
+        <div className="map-area">
+          <WrappedMap 
+          googleMapURL={`https://maps.googleapis.com/maps/api/js?&key=${process.env.REACT_APP_GOOGLE_MAPS_KEY}`}
+          loadingElement={<div style={{height: "100%"}}/>}
+          containerElement={<div style={{height: "100%"}}/>}
+          mapElement={<div style={{height: "100%"}}/>}
+          />
+          
+        </div>
+        <div className="selection-tab">
+          <Selection />
+        </div>
+        <div className="info-tab">
+          <Information />
+        </div>
       </div>
-      <div className="selection-tab">
-        <Selection />
-      </div>
-      <div className="info-tab">
-        <Information />
-      </div>
-    </div>
-  );
+    );
+  };
+  
 }
 
 export default App;

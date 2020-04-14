@@ -18,7 +18,7 @@ class Navbar extends React.Component{
             //small hamburger when it is not in use in mobile, as well as to highlight
             //the current page that is in use with a tab/label component from Bootstrap
             <div className="navbar">
-                <a href="#">Login</a>
+                <a href="../../../public/login.html">Login</a>
                 <a href="#">Customers</a>
                 <a href="#">About</a>
             </div>

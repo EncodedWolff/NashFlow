@@ -1,19 +1,22 @@
 import React from "react";
-import ReactDOM from 'react-dom';
 import Navbar from './Navbar';
 
 
 class Header extends React.Component {
-    constructor(){
-        super();
+    constructor(props) {
+        super(props);
     };
 
-    state = {};
+    state = {
+        userName: this.props.name,
+        company: this.props.company
+    };
 
-    render(){
-        return(
+    render() {
+        return (
             <div>
-                <h1>This is my header!</h1>
+                <h5>{this.userName} Username here</h5>
+                <h6>{this.company} Company here</h6>
                 <Navbar />
             </div>
         );
